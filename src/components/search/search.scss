@@ -1,0 +1,87 @@
+.search {
+  .search-input {
+    transition: all 0.5s;
+    font-family: inherit;
+    height: 43px;
+    outline: none;
+    &.close {
+      width: 0%;
+      border: none;
+      padding: 0;
+      border-radius: 15px;
+    }
+    &.active {
+      width: 100%;
+      border: solid 2px #455223;
+      padding: 10px;
+      border-radius: 15px;
+    }
+  }
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  .searchBnt {
+    cursor: pointer;
+    margin-left: 10px;
+    display: block;
+    padding: 5px 0;
+    height: 43px;
+    &:hover {
+      .search-circle {
+        border-color: rgb(207, 41, 41);
+      }
+      .search-line {
+        background: rgb(188, 91, 91);
+      }
+    }
+    span {
+      display: block;
+      transition: all 0.5s;
+    }
+    .search-circle {
+      width: 25px;
+      height: 25px;
+      position: relative;
+      border-radius: 50%;
+      border: solid 2px #000;
+    }
+    .search-line {
+      width: 4px;
+      height: 16px;
+      position: absolute;
+      left: 100%;
+      transform: rotate(-45deg);
+      background: #000;
+      bottom: -12px;
+      border-radius: 9px;
+      margin-left: 0px;
+    }
+    &.active {
+      padding: 8px 0;
+      margin-left: 20px;
+      &:hover {
+        .search-circle {
+          background: rgb(88, 94, 207);
+        }
+        .search-line {
+          background: rgb(88, 94, 207);
+        }
+      }
+      .search-circle {
+        width: 4px;
+        height: 24px;
+        border-radius: 9px;
+        transform: rotate(45deg);
+        background: #000;
+        border: none;
+      }
+      .search-line {
+        height: 24px;
+        transform: rotate(-90deg);
+        bottom: 0px;
+        left: 0px;
+      }
+    }
+  }
+}
